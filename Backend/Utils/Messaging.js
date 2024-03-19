@@ -2,7 +2,7 @@
 * Socket logic interface for Group Chats
 */
 const socketIo = require('socket.io');
-const db = require('/Database.js');
+const db = require('./Database.js');
 
 const allowedOrigins = [
     'http://10.0.2.2:3000',
