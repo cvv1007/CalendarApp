@@ -1,4 +1,4 @@
-const GoogleCalendar = require('../Interfaces/GoogleCalendar.js');
+const GoogleCalendar = require('../Utils/GoogleCalendar.js');
 const inputs = require('./mockInputs.js');
 
 jest.mock('googleapis', () => {

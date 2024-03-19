@@ -1,31 +1,19 @@
 const server = require('../server.js');
 const request = require('supertest');
 
-const db = require('../Databases/Database.js');
-const Scheduler = require('../Interfaces/Scheduler.js');
-const GoogleCalendar = require('../Interfaces/GoogleCalendar.js');
+const db = require('../Utils/Database.js');
+const Scheduler = require('../Utils/Scheduler.js');
+const GoogleCalendar = require('../Utils/GoogleCalendar.js');
 const inputs = require('./mockInputs.js');
 
 // mock database functions to only test endpoint functionalities
-jest.mock('../Databases/Database.js');
-jest.mock('../Interfaces/GoogleCalendar.js');
+jest.mock('../Utils/Database.js');
+jest.mock('../Utils/GoogleCalendar.js');
 
 // clean up server of tests
 afterAll(() => {
     server.close();
 })
-
-// Backend tests
-// 27 unit tests in server.test.js
-// 6 unit test in scheduler.test.js
-// 5 unit tests in message.test.js
-// 22 unit tests in database.test.js
-
-// Frontend tests
-// 2 tests in CreateNewEventTest.java
-// 1 test in ExampleInstrumentedTest.java
-// 3 tests in preferenceTest.java
-// 4 tests in SendMessageTest.java
 
 const today = new Date();
 const mockEvents = [

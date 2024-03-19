@@ -14,15 +14,20 @@ require('dotenv').config({ path: envFilePath });
 const app = express();
 app.use(express.json());
 
-const options = {
-    key: fs.readFileSync('./privkey.pem'),
-    cert: fs.readFileSync('./fullchain.pem'),
-};
-const httpsServer = https.createServer(options, app);
-const server = http.createServer(app); // HTTP server for testing 
+// Initialize Server
+let server = null;
+if (process.env.TESTING === 'false') {
+    const options = {
+        key: fs.readFileSync('./privkey.pem'),
+        cert: fs.readFileSync('./fullchain.pem'),
+    };
+    const server = https.createServer(options, app);
+} else {
+    server = http.createServer(app); // HTTP server for testing 
+}
 
 // Start socket io service for group chats
-require('./Interfaces/Messaging.js')(httpsServer);
+require('./Utils/Messaging.js')(server);
 
 // handle signin (and register if first time login) with google account
 app.post('/login/google', async (req, res) => {
@@ -181,7 +186,7 @@ const port = 8081;
 const host = "calendo.westus2.cloudapp.azure.com";
 
 if (process.env.TESTING === 'false') {
-    httpsServer.listen(port, () => { console.log(`Server is running on https://${host}:${port}`); });
+    server.listen(port, () => { console.log(`Server is running on https://${host}:${port}`); });
 } else {
     server.listen(3000, () => console.log('Server started on port 3000'));
 }

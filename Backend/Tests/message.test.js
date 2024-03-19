@@ -2,10 +2,10 @@
 
 const { createServer } = require("node:http");
 const io = require('socket.io-client');
-const initializeChatManager = require('../Interfaces/Messaging.js');
+const initializeChatManager = require('../Utils/Messaging.js');
 
-const db = require('../Databases/Database.js');
-jest.mock('../Databases/Database.js');
+const db = require('../Utils/Database.js');
+jest.mock('../Utils/Database.js');
 
 describe('Test socket server group chat', () => {
     let chatManager, clientSocket, server;

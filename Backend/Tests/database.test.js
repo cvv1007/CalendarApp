@@ -1,19 +1,13 @@
 /* Test for functions in Database.js */
 const mongoose = require('mongoose');
 const { MongoMemoryServer } = require('mongodb-memory-server');
-const db = require('../Databases/Database');
+const db = require('../Utils/Database');
 
 // models to interact with memory server
 const UserModel = mongoose.model('user', require('../Schema/userSchema'));
 const ChatModel = mongoose.model('chat', require('../Schema/chatSchema'));
 
 const inputs = require('./mockInputs.js');
-
-
-// 27 unit tests in server.test.js
-// 6 unit test in scheduler.test.js
-// 5 unit tests in message.test.js
-// 22 unit tests in database.test.js
 
 let mongoServer;
 beforeAll(async () => {

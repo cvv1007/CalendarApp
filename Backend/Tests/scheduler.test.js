@@ -1,7 +1,4 @@
-const Scheduler = require('../Interfaces/Scheduler.js');
-
-// 27 unit tests in server.test.js
-// 6 unit test in scheduler.test.js
+const Scheduler = require('../Utils/Scheduler.js');
 
 // mock google api function
 const { Client } = require("@googlemaps/google-maps-services-js");
