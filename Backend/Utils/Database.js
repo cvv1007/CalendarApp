@@ -13,7 +13,7 @@ const path = require('path');
 const envFilePath = path.join(__dirname ,'/../.env');
 require('dotenv').config({ path: envFilePath });
 
-const maxMessages = 100; // maximum messages displayed to user
+const maxMessages = 5; // maximum messages displayed to user
 const mongoURI = process.env.MONGO_URI;
 
 class Database {
