@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.841" />
+
+    <EditText
+        android:id="@+id/et_eName"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/button_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100" />
+
+    <EditText
+        android:id="@+id/et_location"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="@string/address_hint"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.702"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_eName" />
+
+    <EditText
+        android:id="@+id/et_sTime"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/time_hint"
+        app:layout_constraintBottom_toTopOf="@+id/button_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.702"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_location"
+        app:layout_constraintVertical_bias="0.191" />
+
+    <EditText
+        android:id="@+id/et_eTime"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/time_hint"
+        app:layout_constraintBottom_toTopOf="@+id/button_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.700"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_sTime"
+        app:layout_constraintVertical_bias="0.406" />
+
+    <TextView
+        android:id="@+id/tv_eName"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="Event Name"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_submit"
+        app:layout_constraintEnd_toStartOf="@+id/et_eName"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.188" />
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="44dp"
+        android:text="Address"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_sTime"
+        app:layout_constraintEnd_toStartOf="@+id/et_location"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_eName"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tv_sTime"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="32dp"
+        android:text="Start Time"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_eTime"
+        app:layout_constraintEnd_toStartOf="@+id/et_sTime"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_eName"
+        app:layout_constraintVertical_bias="0.929" />
+
+    <TextView
+        android:id="@+id/tv_eTime"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="224dp"
+        android:text="End Time"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/et_eTime"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_eName"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tv_createTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_createTitle"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/et_eName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Calendo</string>
+    <string name="head_text">Calendo</string>
+    <string name="button_send">send</string>
+    <string name="message_text">Enter Text Here</string>
+    <string name="message_sender">John</string>
+
+
+    <string name="button_googleSignIn">Google Sign In</string>
+    <string name="button_signUp">sign up</string>
+    <string name="button_calendar">Calendar</string>
+    <string name="button_signOut">Sign out</string>
+    <string name="button_groupChat">Group Chats</string>
+    <string name="button_setting">Setting</string>
+    <string name="button_alarm">Set alarm</string>
+    <string name="button_activity">Activities</string>
+    <string name="text_transit">Select Transit preference</string>
+    <string name="button_create_room">create chat room</string>
+    <string name="button_create_schedule">Create Schedule</string>
+    <string name="button_eventDisplay">Schedule</string>
+    <string name="submit_button">Submit</string>
+
+
+    <string name="setting_img_description">Setting</string>
+    <string name="signout_img_description">Sign out</string>
+    <string name="address_hint">Address: e.g., 123 Main St, City</string>
+    <string name="time_hint">YYYY-MM-DD HH:mm</string>
+
+<!--    <string name="server_client_id">805259873874-raavn3hag37qjfnm8qt4mhdsgqqhdeu7.apps.googleusercontent.com</string>-->
+<!--    <string name="android_client_id">805259873874-3gltphbmrs7d580c3k6n071rjcspfr4f.apps.googleusercontent.com</string>-->
+
+    <string name="server_client_id">898656996479-ia70fameudhe90j54ojjftv1i616a3fs.apps.googleusercontent.com</string>
+    <string name="android_client_id">898656996479-3nmeeiqc8kvd3qm775gcp1m2es08d00l.apps.googleusercontent.com</string>
+
+
+    <string-array name="preference_entries">
+        <item>Bus</item>
+        <item>Car</item>
+        <item>Bicycle</item>
+        <!-- Add more items as needed -->
+    </string-array>
+
+    <string-array name="preference_values">
+        <item>value1</item>
+        <item>value2</item>
+        <item>value3</item>
+        <!-- Make sure these values are unique -->
+    </string-array>
+
+    <string name="track">Track Activity</string>
+    <string name="percentage">%1$d%%</string>
+    <string name="bicycle">On a bicycle</string>
+    <string name="foot">On foot</string>
+    <string name="running">Running</string>
+    <string name="still">Still</string>
+    <string name="tilting">Tilting</string>
+    <string name="unknown_activity">Unknown activity</string>
+    <string name="vehicle">In a vehicle</string>
+    <string name="walking">Walking</string>
+
+    <string name="tv_startTime">Start Time</string>
+    <string name="tv_eventName">Event Name</string>
+    <string name="tv_duration">Duration</string>
+
+    <string name="tv_scheduleDisplay">List of Events</string>
+    <string name="tv_createTitle">Create Event</string>
+
+</resources>

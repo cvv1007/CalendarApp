@@ -1,0 +1,37 @@
+name: Backend Tests
+
+on: [push, pull_request]
+
+jobs:
+  backend-tests:
+    runs-on: ubuntu-latest
+
+    env:
+      MONGO_URI: mongodb://localhost:27017/calendoDB
+      TESTING: true
+      # set these values so tests have something to read
+      GOOGLE_API_KEY: null
+      CLIENT_ID: null
+      CLIENT_SECRET: null
+      REDIRECT_URL: null
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.20.1
+
+      - name: Change to Backend Directory
+        run: cd Backend
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: Backend
+
+      - name: Run tests
+        run: npm test
+        working-directory: Backend
+        

@@ -1,0 +1,115 @@
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <SwitchPreferenceCompat
+        app:key="notifications"
+        app:title="Notifications"
+        app:defaultValue="true"/>
+
+    <!--    Alarms Preferences-->
+    <PreferenceCategory
+        app:key="alarms_category"
+        app:title="Alarms">
+
+        <SwitchPreferenceCompat
+            app:key="morning_alarm"
+            app:title="Enable morning alarm"
+            />
+
+        <SwitchPreferenceCompat
+            app:key="event_alarm"
+            app:title="Enable alarms for event"
+            app:defaultValue="true"/>
+
+    </PreferenceCategory>
+
+    <!--    Alerts Preferences-->
+    <PreferenceCategory
+        app:key="alerts_category"
+        app:title="Alerts">
+
+        <SwitchPreferenceCompat
+            app:key="traffic_alerts"
+            app:title="Traffic alerts"
+            app:defaultValue="true"/>
+        <SwitchPreferenceCompat
+            app:key="weather_alerts"
+            app:title="Weather alerts"/>
+
+        <SwitchPreferenceCompat
+            app:key="vibration_alert"
+            app:title="Vibration alert"/>
+    </PreferenceCategory>
+
+    <!--    Location Preferences-->
+    <PreferenceCategory
+        app:key="location_category"
+        app:title="Location">
+
+        <EditTextPreference
+            app:key="home_location"
+            app:title="Home location"
+            app:dialogTitle="Your home location"
+            app:defaultValue=""/>
+
+        <EditTextPreference
+            app:key="school_location"
+            app:title="School location"
+            app:dialogTitle="Your school location"
+            app:defaultValue=""/>
+
+        <EditTextPreference
+            app:key="work_location"
+            app:title="Work location"
+            app:dialogTitle="Your work location"
+            app:defaultValue=""/>
+
+    </PreferenceCategory>
+
+    <!--    Other Preferences-->
+    <PreferenceCategory
+        app:key="others"
+        app:title="Others">
+
+        <EditTextPreference
+            app:key="preparation_time"
+            app:title="Preparation time (min)"
+            app:summary="%s"
+            app:dialogTitle="Your time"
+            app:defaultValue="30"/>
+        <ListPreference
+            app:key="commute_method"
+            app:title="Commute method"
+            app:dialogTitle="Choose one"
+            app:summary="%s"
+            app:entries="@array/options_list"
+            app:entryValues="@array/options_list"
+            app:defaultValue="0" /> <!-- Set default to driving -->
+
+        <EditTextPreference
+            app:key="maxMissedBus"
+            app:title="Max missed bus"
+            app:summary="%s"
+            app:dialogTitle="Enter bus"
+            app:defaultValue="2"/>
+
+
+        <EditTextPreference
+            app:key="snooze_duration"
+            app:title="Snooze duration (min) "
+            app:summary="%s"
+            app:dialogTitle="Your snooze duration"
+            app:defaultValue="10"/>
+
+    </PreferenceCategory>
+
+
+
+
+
+
+    <!--    <Preference-->
+    <!--        app:key="feedback"-->
+    <!--        app:title="Send feedback"-->
+    <!--        app:summary="Report technical issues or suggest new features"/>-->
+
+</PreferenceScreen>

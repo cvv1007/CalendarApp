@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="options_list" >
+<!--DRIVING, BICYCLING, WALKING, TRANSIT-->
+        <item>Driving</item>
+        <item>Transit</item>
+        <item>Walking</item>
+        <item>Bicycling</item>
+    </string-array>
+</resources>
